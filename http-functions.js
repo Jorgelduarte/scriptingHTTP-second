@@ -4,8 +4,8 @@ var requestOptions = {
     host: 'sytantris.github.io',
     path: '/http-examples/step4.html'
   };
-
-function getHTML (options, callback) {
+ 
+module.exports = function getHTML (options, callback) {
 
     var chunkData;
     https.get(requestOptions, function (response) {
@@ -27,8 +27,6 @@ function getHTML (options, callback) {
     });
 }
 
-function printHTML (html) {
-    console.log(html);
-  }
-  
-getHTML(requestOptions, printHTML)
+
+
+
